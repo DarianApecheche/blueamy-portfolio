@@ -1,0 +1,46 @@
+---
+// Hero.astro
+---
+
+<div class="relative w-full h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+
+  <!-- Fondo con imagen -->
+  <div class="absolute inset-0 bg-[url('file.jpg')] bg-cover bg-center"></div>
+  
+  <!-- Overlay degradado suave -->
+  <div class="absolute inset-0 bg-gradient-to-b from-[#c9fadc]/70 via-[#9ac1fc]/70 to-[#1e3a8a]/80 backdrop-blur-[4px]"></div>
+
+  <!-- Elementos decorativos (círculos difusos pastel) -->
+  <div class="absolute top-14 left-6 w-20 h-20 bg-[#fbcfe8]/40 rounded-full blur-3xl animate-pulse"></div>
+  <div class="absolute bottom-20 right-10 w-28 h-28 bg-[#9ac1fc]/30 rounded-full blur-3xl animate-bounce"></div>
+
+  <!-- Contenido principal -->
+  <div class="relative z-10 flex flex-col items-center gap-6">
+    <!-- Nombre -->
+    <h1 class="text-7xl sm:text-7xl font-sacramento text-white drop-shadow-xl tracking-wide animate-fadeIn">
+      Blue Amy
+    </h1>
+
+    <!-- Subtítulo -->
+    <p class="text-lg sm:text-xl text-white/90 max-w-sm leading-relaxed animate-fadeIn delay-200">
+      Manicura profesional con amor y estilo
+    </p>
+
+    <!-- CTA -->
+    <a 
+      href="#citas" 
+      class="mt-4 bg-gradient-to-r from-[#c9fadc] to-[#9ac1fc] text-[#1e3a8a] font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-out backdrop-blur-sm"
+    >
+      Reserva tu cita
+    </a>
+  </div>
+</div>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeIn { animation: fadeIn 1s ease forwards; }
+  .delay-200 { animation-delay: 0.2s; }
+</style>

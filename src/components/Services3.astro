@@ -1,0 +1,27 @@
+---
+// components/ServicesImageHover.astro
+---
+
+<section id="servicios" class="w-full px-5 py-12">
+  <h2 class="text-4xl font-serif text-center text-blue-800 mb-10">Servicios</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+    <!-- Servicio con imagen -->
+    <div class="relative rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg">
+      <img src="/antes.jpg" alt="Manicura Premium" class="w-full h-64 object-cover" />
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
+        <h3 class="text-lg font-semibold">Manicura Premium</h3>
+        <p class="text-sm text-gray-200">El servicio más completo y delicado para tus uñas</p>
+      </div>
+    </div>
+
+    <!-- Otro servicio -->
+    <div class="relative rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg">
+      <img src="/despues.jpg" alt="Uñas Acrílicas" class="w-full h-64 object-cover" />
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
+        <h3 class="text-lg font-semibold">Uñas Acrílicas</h3>
+        <p class="text-sm text-gray-200">Resistentes y con acabado natural</p>
+      </div>
+    </div>
+  </div>
+</section>
