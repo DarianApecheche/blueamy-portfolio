@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import 'aos/dist/aos.css'
 ---
 
 <!doctype html>
@@ -13,7 +14,6 @@ import "../styles/global.css";
 	</head>
 	<body>
 		<slot />
-		<h1> </h1>
 	</body>
 </html>
 
@@ -21,9 +21,12 @@ import "../styles/global.css";
 	html,
 	body {
 		margin: 0;
-		width: 100vw;
-		height: 100vh;
 		background: linear-gradient(90deg, #c9fadc, #9ac1fc);
-		padding-bottom: 30px;
 	}
 </style>
+
+
+<script>
+    import AOS from 'aos'
+    AOS.init()
+</script>

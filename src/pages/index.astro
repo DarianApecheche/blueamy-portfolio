@@ -8,17 +8,22 @@ import ServicesBento from '../components/ServicesBento.astro'
 import Services3 from '../components/Services3.astro'
 import Galeria1 from '../components/Galeria1.astro'
 import Galeria3 from '../components/Galeria3.astro'
+import Services4 from '../components/Services4.astro';
+import PriceList from '../components/Prices/PriceList.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import NavBar from '../components/NavBar.astro'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
+	<NavBar></NavBar>
 	<Hero></Hero>
 	<About></About>
-	<ServicesGrid></ServicesGrid>
-	<ServicesBento></ServicesBento>
-	<Services3></Services3>
-	<Galeria1></Galeria1>
+	<PriceList></PriceList>
 	<Galeria3></Galeria3>
+	<Contact></Contact>
+	<Footer></Footer>
 </Layout>

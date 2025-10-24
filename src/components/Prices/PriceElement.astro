@@ -1,0 +1,13 @@
+---
+interface Props {
+  name: string;
+  price: string;
+}
+
+const { name, price } = Astro.props;
+---
+
+<li class="flex justify-between items-center py-2 border-b border-blue-100/50 last:border-b-0 transition hover:bg-[#a8d2f2] rounded-md px-2">
+  <span>{name}</span>
+  <span class="font-semibold text-blue-600">{price}</span>
+</li>

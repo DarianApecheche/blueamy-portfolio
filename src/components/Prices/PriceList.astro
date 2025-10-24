@@ -1,0 +1,19 @@
+---
+import PriceCard from './PriceCard.astro';
+import PricesData from '../../data/prices.json'
+---
+
+<section id="prices" class="w-full px-7 py-12">
+  <h2 class="text-4xl font-serif text-center text-blue-800 mb-10 filter drop-shadow-md">Lista de Precios</h2>
+
+  <div class="max-w-3xl px-3 mx-auto space-y-6">
+    {PricesData.map((group) => (
+      <PriceCard 
+        title={group.title} 
+        icon={group.icon} 
+        items={group.items} 
+        subgroup={group.subgroup} 
+      />
+    ))}
+  </div>
+</section>
