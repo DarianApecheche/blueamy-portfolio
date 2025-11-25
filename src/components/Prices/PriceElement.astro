@@ -7,7 +7,7 @@ interface Props {
 const { name, price } = Astro.props;
 ---
 
-<li class="flex justify-between items-center py-2 border-b border-blue-100/50 last:border-b-0 transition hover:bg-[#b0dcfe] rounded-md px-2">
+<li class="flex justify-between items-center py-2 border-b border-blue-100/50 last:border-b-0 transition rounded-md px-2">
   <span class="name">{name}</span>
   <span class="font-semibold text-blue-400">{price}</span>
 </li>
@@ -20,5 +20,6 @@ const { name, price } = Astro.props;
     span{
       color: #193cb8;
     }
+    background-color: #b0dcfe;
   }
 </style>
