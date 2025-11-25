@@ -4,6 +4,7 @@ import PriceElement from './PriceElement.astro';
 interface Props {
   title: string;
   icon: string;
+  background : string;
   items: Array<{ name: string; price: string }>;
   subgroup?: {
     title: string;
@@ -11,29 +12,31 @@ interface Props {
   };
 }
 
-const { title, icon, items, subgroup } = Astro.props;
+const { title, icon, items, subgroup, background } = Astro.props;
 ---
 
-<div data-aos="fade-in" data-aos-offset="200" class="bg-white/40 backdrop-blur-md rounded-2xl shadow-md p-6 duration-300 hover:shadow-xl brightness-105 border border-transparent hover:border-blue-200/50">
-  <h3 class="text-xl font-semibold text-blue-800 mb-4 flex items-center gap-2">
+<div data-aos="fade-in" data-aos-offset="200" class={`${background} bg-cover md:bg-center overflow-hidden bg-no-repeat rounded-2xl shadow-md duration-300 brightness-105 border-blue-200/50`}>
+  <div class="w-full h-full backdrop-brightness-50 p-6">
+    <h3 class="text-xl font-semibold text-blue-400 mb-4 flex items-center gap-2">
     <span class="inline-block">
       <img loading="lazy" class="w-8 h-8" src={icon} alt={title + " icon"} />
     </span>
     <p>{title}</p>
   </h3>
-  <ul class="space-y-3 text-gray-700">
+  <ul class="space-y-3 text-gray-200">
     {items.map((item) => (
       <PriceElement name={item.name} price={item.price} />
     ))}
   </ul>
   {subgroup && (
     <fragment>
-      <h4 class="text-lg font-semibold text-blue-800 mb-2 mt-4">{subgroup.title}</h4>
-      <ul class="space-y-3 text-gray-700">
+      <h4 class="text-lg font-semibold text-blue-400 mb-2 mt-4">{subgroup.title}</h4>
+      <ul class="space-y-3 text-gray-200">
         {subgroup.items.map((item) => (
           <PriceElement name={item.name} price={item.price} />
         ))}
       </ul>
     </fragment>
   )}
+  </div>
 </div>

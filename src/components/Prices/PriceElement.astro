@@ -7,7 +7,18 @@ interface Props {
 const { name, price } = Astro.props;
 ---
 
-<li class="flex justify-between items-center py-2 border-b border-blue-100/50 last:border-b-0 transition hover:bg-[#a8d2f2] rounded-md px-2">
-  <span>{name}</span>
-  <span class="font-semibold text-blue-600">{price}</span>
+<li class="flex justify-between items-center py-2 border-b border-blue-100/50 last:border-b-0 transition hover:bg-[#b0dcfe] rounded-md px-2">
+  <span class="name">{name}</span>
+  <span class="font-semibold text-blue-400">{price}</span>
 </li>
+
+<style>
+  li:hover{
+    .name{
+      color: #364153;
+    }
+    span{
+      color: #193cb8;
+    }
+  }
+</style>

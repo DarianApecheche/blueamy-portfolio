@@ -10,7 +10,8 @@ import PricesData from '../../data/prices.json'
     {PricesData.map((group) => (
       <PriceCard 
         title={group.title} 
-        icon={group.icon} 
+        icon={group.icon}
+        background={group.background} 
         items={group.items} 
         subgroup={group.subgroup} 
       />

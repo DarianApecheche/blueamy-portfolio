@@ -2,34 +2,29 @@
 // Hero.astro
 ---
 
-<div class="relative w-full h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+<div class="relative w-full h-screen flex bg flex-col justify-center items-center text-center px-6 overflow-hidden">
 
-  <!-- Fondo con imagen -->
-  <div class="absolute inset-0 bg-[url('file.jpg')] bg-cover bg-center"></div>
-  
-  <!-- Overlay degradado suave -->
-  <div class="absolute inset-0 bg-gradient-to-b from-[#c9fadc]/70 via-[#9ac1fc]/70 to-[#1e3a8a]/80 backdrop-blur-[4px]"></div>
-
-  <!-- Elementos decorativos (círculos difusos pastel) -->
-  <div class="absolute top-14 left-6 w-20 h-20 bg-[#fbcfe8]/40 rounded-full blur-3xl animate-pulse"></div>
-  <div class="absolute bottom-20 right-10 w-28 h-28 bg-[#9ac1fc]/30 rounded-full blur-3xl animate-bounce"></div>
-
+<!-- Fondo: foto real de uñas o manos + overlay oscuro para que el texto resalte -->
+  <div 
+    class="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-50"
+    style="background-image: url('/img/hero/hero.jpeg');"
+  ></div>
   <!-- Contenido principal -->
   <div class="relative z-10 flex flex-col items-center gap-6">
     <!-- Nombre -->
-    <h1 class="text-7xl sm:text-7xl font-sacramento text-white drop-shadow-xl tracking-wide animate-fadeIn">
-      Blue Amy
+    <h1 class="flex flex-col items-center leading-tight gap-4">
+      <span class="text-6xl sm:text-7xl md:text-8xl font-sacramento text-white drop-shadow-2xl">
+        Blue Amy
+      </span>
+      <span class="text-lg sm:text-xl text-white/90 max-w-sm leading-relaxed delay-200">
+        Manicurista profesional en Matanzas
+      </span>
     </h1>
-
-    <!-- Subtítulo -->
-    <p class="text-lg sm:text-xl text-white/90 max-w-sm leading-relaxed animate-fadeIn delay-200">
-      Manicura profesional con amor y estilo
-    </p>
 
     <!-- CTA -->
     <a 
       href="https://wa.me/+5355725772" 
-      class="mt-4 bg-gradient-to-r gap-2 animate-fadeIn flex items-center from-[#c9fadc] to-[#9ac1fc] text-[#1e3a8a] font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-2xl hover:brightness-110 transition-all duration-300 ease-out backdrop-blur-sm"
+      class="mt-4 bg-gradient-to-r gap-2 flex items-center from-[#c9fadc] to-[#9ac1fc] text-[#1e3a8a] font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-2xl duration-300 hover:brightness-110 backdrop-blur-sm"
     >
 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 14 14"><g fill="none"><path fill="#8fbffa" fill-rule="evenodd" d="M13.627 7.003C13.627 3.396 10.614.377 7 .379C3.39.381.38 3.394.38 7.003c0 1.213.336 2.412.968 3.449L.41 12.95a.5.5 0 0 0 .557.668l3.28-.593A6.6 6.6 0 0 0 7 13.62c3.614.002 6.627-3.008 6.627-6.618Z" clip-rule="evenodd"/><path fill="#2859c5" d="M7.356 10.314c1.091.7 2.232.098 2.969-.498c.403-.326.39-.92.036-1.298l-.644-.685c-.193-.206-.524-.207-.785-.1c-.312.125-.68.163-.965.076c-.946-.288-1.343-.78-1.664-1.281c-.256-.399-.134-.934.073-1.333c.131-.253.124-.587-.087-.78l-.692-.631c-.329-.3-.827-.352-1.13-.025c-.757.817-1.264 2.16-.726 2.998c.919 1.43 2.185 2.638 3.615 3.557"/></g></svg>
       Reserva tu cita
@@ -37,7 +32,8 @@
   </div>
 </div>
 
-<style>
+<!-- 
+  <style>
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -45,3 +41,5 @@
   .animate-fadeIn { animation: fadeIn 1s ease forwards; }
   .delay-200 { animation-delay: 0.2s; }
 </style>
+-->
+

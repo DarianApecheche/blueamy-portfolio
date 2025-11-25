@@ -2,6 +2,7 @@
   {
     "title": "Esmaltados y Bases",
     "icon": "/icons/nail1.svg",
+    "background": "bg-[url(/img/services-images/Esmaltado.jpeg)]",
     "items": [
       { "name": "Esmaltado Natural", "price": "$150" },
       { "name": "Esmaltado en gel", "price": "$300" },
@@ -12,6 +13,7 @@
   {
     "title": "Acrílico/Poligel en uñas naturales",
     "icon": "/icons/polish.svg",
+    "background": "bg-[url(/img/services-images/Acrilico.jpeg)]",
     "items": [
       { "name": "Acrílico/Poligel", "price": "$800-900" },
       { "name": "Relleno", "price": "$700-800" }
@@ -20,6 +22,7 @@
   {
     "title": "Extensión Acrílico/Poligel",
     "icon": "/icons/nail2.svg",
+    "background": "bg-[url(/img/services-images/Extensiones.jpeg)]",
     "items": [
       { "name": "Cortas", "price": "$1000" },
       { "name": "Medianas", "price": "$1200" },
@@ -37,6 +40,7 @@
   {
     "title": "Servicios en Pies y Otros",
     "icon": "/icons/nail3.svg",
+    "background": "bg-[url(/img/services-images/Pies.jpeg)]",
     "items": [
       { "name": "Acrílico/Poligel en pies", "price": "$900" },
       { "name": "Acrílico/Poligel en el pulgar", "price": "$400" },
